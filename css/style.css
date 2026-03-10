@@ -541,6 +541,43 @@ li:has(.dropdown-divider) {
   color: #8A8480;
 }
 
+/* ===== Legal/Privacy Page ===== */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.75rem;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content h3 {
+  margin-top: var(--spacing-md);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.legal-content p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.8;
+}
+
+.legal-content ul {
+  margin: 0.5rem 0 var(--spacing-sm) 1.5rem;
+  list-style: disc;
+}
+
+.legal-content ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+
 /* ===== About Page ===== */
 .about-hero {
   background: #62391B;
