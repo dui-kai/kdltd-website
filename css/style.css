@@ -539,12 +539,12 @@ h4 { font-size: 1.15rem; }
 
 /* ===== About Page ===== */
 .about-hero {
-  background: linear-gradient(135deg, var(--color-warm) 0%, var(--color-warm-dark) 100%);
+  background: #62391B;
   padding: var(--spacing-xl) 0;
   text-align: center;
 }
 
-.about-hero h1 { color: var(--color-coral); }
+.about-hero h1 { color: var(--color-cream); }
 .about-hero p { color: var(--color-white); max-width: 650px; margin: var(--spacing-sm) auto 0; font-size: 1.1rem; }
 
 .values-grid {
@@ -597,13 +597,13 @@ h4 { font-size: 1.15rem; }
 
 /* ===== Service Landing Page ===== */
 .service-hero {
-  background: linear-gradient(135deg, var(--color-warm) 0%, var(--color-warm-dark) 100%);
+  background: #62391B;
   padding: var(--spacing-xl) 0;
   text-align: center;
 }
 
 .service-hero h1 {
-  color: var(--color-coral);
+  color: var(--color-cream);
   font-size: 2.75rem;
   margin-bottom: var(--spacing-xs);
 }
@@ -778,8 +778,8 @@ h4 { font-size: 1.15rem; }
     flex-wrap: nowrap;
   }
 
-  /* Move hamburger to the right, before the flag */
-  nav { order: 2; margin-left: auto; }
+  /* Center hamburger between logo and flag */
+  nav { order: 2; margin-left: auto; margin-right: auto; }
   .header-right { order: 3; gap: 0.5rem; }
 
   .form-row { grid-template-columns: 1fr; }
