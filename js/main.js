@@ -45,6 +45,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Cookie consent banner
+  const cookieBanner = document.getElementById('cookie-banner');
+  if (cookieBanner) {
+    const consent = localStorage.getItem('kdltd-cookie-consent');
+    if (!consent) {
+      cookieBanner.classList.add('show');
+    }
+
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('kdltd-cookie-consent', 'accepted');
+        cookieBanner.classList.remove('show');
+      });
+    }
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => {
+        localStorage.setItem('kdltd-cookie-consent', 'rejected');
+        cookieBanner.classList.remove('show');
+      });
+    }
+  }
+
+  // "Manage Cookies" link resets preference
+  const manageCookies = document.getElementById('manage-cookies');
+  if (manageCookies) {
+    manageCookies.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('kdltd-cookie-consent');
+      const banner = document.getElementById('cookie-banner');
+      if (banner) banner.classList.add('show');
+    });
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
