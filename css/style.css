@@ -120,8 +120,8 @@ h4 { font-size: 1.15rem; }
 .header-phone:hover { color: var(--color-coral); }
 
 .header-flag {
-  width: 50px;
-  height: 63px;
+  width: 61px;
+  height: 77px;
   object-fit: contain;
 }
 
@@ -212,14 +212,14 @@ h4 { font-size: 1.15rem; }
 
 /* ===== Hero Section ===== */
 .hero {
-  background: linear-gradient(135deg, var(--color-warm) 0%, var(--color-warm-dark) 100%);
-  padding: var(--spacing-xl) 0;
+  background: #62391B;
+  padding: var(--spacing-lg) 0;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 3.25rem;
-  color: #62391B;
+  color: var(--color-cream);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -763,10 +763,10 @@ h4 { font-size: 1.15rem; }
   .nav-dropdown.open .dropdown-menu { display: block; }
 
   .header-phone { display: none; }
-  .header-flag { width: 30px; height: 38px; }
+  .header-flag { width: 45px; height: 57px; }
 
   .form-row { grid-template-columns: 1fr; }
 
-  .hero { padding: var(--spacing-lg) 0; }
+  .hero { padding: var(--spacing-md) 0; }
   .hero h1 { font-size: 2rem; }
 }
