@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | KD Ltd — 40+ Years of Carpentry Excellence</title>
-  <meta name="description" content="About KD Ltd — 40+ years of carpentry and renovation expertise. Crafting home solutions with creativity, quality, and care. Serving Kitchener-Waterloo and surrounding areas.">
+  <title>Free Estimate | KD Ltd — No-Obligation Quote for Your Project</title>
+  <meta name="description" content="Get a free, no-obligation estimate from KD Ltd. 40+ years of renovation expertise serving Kitchener-Waterloo. Call 519-313-5624 or fill out our form.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://kdltd.ca/about">
+  <link rel="canonical" href="https://kdltd.ca/free-estimate">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="About Us | KD Ltd — 40+ Years of Carpentry Excellence">
-  <meta property="og:description" content="About KD Ltd — 40+ years of carpentry and renovation expertise. Crafting home solutions with creativity, quality, and care. Serving Kitchener-Waterloo and surrounding areas.">
-  <meta property="og:url" content="https://kdltd.ca/about">
+  <meta property="og:title" content="Free Estimate | KD Ltd — No-Obligation Quote">
+  <meta property="og:description" content="Get a free, no-obligation estimate from KD Ltd. 40+ years of renovation expertise serving Kitchener-Waterloo.">
+  <meta property="og:url" content="https://kdltd.ca/free-estimate">
   <meta property="og:site_name" content="KD Ltd">
   <meta property="og:image" content="https://static.wixstatic.com/media/203968_e239c35239604e47b72fe45e1dff2469~mv2.jpeg">
   <meta property="og:locale" content="en_CA">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Us | KD Ltd — 40+ Years of Carpentry Excellence">
-  <meta name="twitter:description" content="About KD Ltd — 40+ years of carpentry and renovation expertise. Crafting home solutions with creativity, quality, and care. Serving Kitchener-Waterloo and surrounding areas.">
+  <meta name="twitter:title" content="Free Estimate | KD Ltd">
+  <meta name="twitter:description" content="Get a free, no-obligation estimate from KD Ltd. 40+ years of renovation expertise serving Kitchener-Waterloo.">
 
   <!-- Google Analytics (GA4) — Replace GA_MEASUREMENT_ID with your actual ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -35,19 +35,6 @@
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
-
-  <!-- Facebook Pixel — Replace FB_PIXEL_ID with your actual ID -->
-  <!--
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'FB_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  -->
 </head>
 <body>
 
@@ -64,7 +51,7 @@
         </button>
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/about" class="active">About Us</a></li>
+          <li><a href="/about">About Us</a></li>
           <li class="nav-dropdown">
             <a href="/services" class="dropdown-toggle">Our Services</a>
             <ul class="dropdown-menu">
@@ -93,62 +80,85 @@
   <!-- Hero -->
   <section class="about-hero">
     <div class="container">
-      <h1>Crafting Home Solutions</h1>
-      <p>For over 40 years, we've been building, renovating, and improving homes as if they were our own.</p>
+      <h1>Get Your Free Estimate</h1>
+      <p>No obligation. No pressure. Just honest advice from 40+ years of experience.</p>
     </div>
   </section>
 
-  <!-- Our Expertise -->
+  <!-- Estimate Form + Trust Signals -->
   <section class="section">
     <div class="container">
-      <div class="section-title">
-        <h2>Our Expertise</h2>
-      </div>
-      <div style="max-width:800px; margin:0 auto; text-align:center;">
-        <p style="font-size:1.05rem; line-height:1.9;">What started with a passion for carpentry has grown into a trusted renovation practice rooted in craftsmanship, honesty, and pride in our work. We take the time to listen, guide, and build with care — because transforming your space is personal to us, too.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-title">
-        <h2>Mission</h2>
-        <p>Our mission is to turn inspiration into reality by creating functional, stunning spaces tailored to how you live.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Values -->
-  <section class="section">
-    <div class="container">
-      <div class="values-grid">
-        <div class="value-card">
-          <h3>Innovation</h3>
-          <h4>Unleashing Creativity</h4>
-          <p>We combine creative thinking with smart, modern solutions to bring new life to every space. By blending traditional craftsmanship with innovative approaches, we turn ideas into thoughtful designs that are both functional and inspiring — always tailored to how you live and use your home.</p>
+      <div class="estimate-layout">
+        <div class="estimate-form-col">
+          <h2>Tell Us About Your Project</h2>
+          <p>Fill out the form below and we'll get back to you within 24 hours with a detailed estimate.</p>
+          <form id="estimate-form" class="estimate-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="est-first-name">First Name *</label>
+                <input type="text" id="est-first-name" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="est-last-name">Last Name *</label>
+                <input type="text" id="est-last-name" name="lastName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="est-email">Email *</label>
+              <input type="email" id="est-email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="est-phone">Phone</label>
+              <input type="tel" id="est-phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="est-service">Service Interested In</label>
+              <select id="est-service" name="service">
+                <option value="">Select a service...</option>
+                <option value="kitchen-renovation">Kitchen Renovation</option>
+                <option value="bathroom-renovation">Bathroom Renovation</option>
+                <option value="custom-cabinetry">Custom Cabinetry</option>
+                <option value="basement-finishing">Basement Finishing</option>
+                <option value="home-repairs">Home Repairs</option>
+                <option value="home-upgrades">Home Upgrades</option>
+                <option value="installations">Installations</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="est-message">Project Details</label>
+              <textarea id="est-message" name="message" rows="5" placeholder="Tell us about your project — what you're looking to do, timeline, budget range, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn--coral btn--lg" style="width:100%;">Get My Free Estimate</button>
+            <p id="estimate-success" style="display:none; color:green; text-align:center; margin-top:1rem; font-weight:600;">Thank you! We'll be in touch within 24 hours.</p>
+          </form>
         </div>
-        <div class="value-card">
-          <h3>Quality</h3>
-          <h4>Exceeding Expectations</h4>
-          <p>Quality is at the core of everything we do. From materials to craftsmanship, we strive to exceed expectations and deliver exceptional results that stand the test of time.</p>
-        </div>
-        <div class="value-card">
-          <h3>Customer Satisfaction</h3>
-          <h4>Your Delight, Our Priority</h4>
-          <p>Customer satisfaction drives our commitment to excellence. We prioritize your needs and preferences, ensuring that each project is tailored to your vision and executed with precision and care.</p>
+        <div class="estimate-trust-col">
+          <div class="estimate-trust-card">
+            <h3>Why Get an Estimate from KD Ltd?</h3>
+            <ul>
+              <li><strong>100% Free</strong> — No hidden fees or obligations</li>
+              <li><strong>40+ Years Experience</strong> — Trusted craftsmanship since 1986</li>
+              <li><strong>WSIB Insured</strong> — Full workplace safety coverage</li>
+              <li><strong>Licensed &amp; Insured</strong> — Comprehensive liability protection</li>
+              <li><strong>Local Experts</strong> — Serving Kitchener-Waterloo, Cambridge &amp; area</li>
+              <li><strong>Fast Response</strong> — We reply within 24 hours</li>
+            </ul>
+          </div>
+          <div class="estimate-trust-card">
+            <h3>Prefer to Call?</h3>
+            <p>Speak directly with our team:</p>
+            <a href="tel:519-313-5624" class="btn btn--coral btn--lg" style="width:100%; text-align:center; margin-top:0.5rem;">Call 519-313-5624</a>
+          </div>
+          <div class="estimate-trust-card">
+            <h3>What Our Clients Say</h3>
+            <blockquote style="font-style:italic; border-left:3px solid var(--color-coral); padding-left:1rem; margin:0.5rem 0;">
+              "The KD team exceeded our expectations. Professional, on-time, and the quality of work is outstanding."
+            </blockquote>
+            <p style="font-size:0.85rem; color:var(--color-text-light);">— Karen, Waterloo</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="service-cta">
-    <div class="container">
-      <h2>Ready to Transform Your Home?</h2>
-      <p>Get in touch for a free estimate. We'd love to hear about your project.</p>
-      <a href="/#contact" class="btn btn--coral btn--lg">Contact Us</a>
     </div>
   </section>
 
@@ -172,9 +182,9 @@
         <div class="footer-col">
           <h4>Follow Us</h4>
           <div class="social-links">
-            <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-            <a href="https://www.instagram.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-            <a href="https://www.linkedin.com/company/YOUR_PAGE" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/YOUR_PAGE" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
         <div class="footer-col">

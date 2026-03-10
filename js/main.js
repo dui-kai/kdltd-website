@@ -45,6 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Estimate form
+  const estimateForm = document.getElementById('estimate-form');
+  if (estimateForm) {
+    estimateForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('estimate-success');
+      if (msg) {
+        msg.style.display = 'block';
+        estimateForm.reset();
+        setTimeout(() => { msg.style.display = 'none'; }, 5000);
+      }
+    });
+  }
+
   // Cookie consent banner
   const cookieBanner = document.getElementById('cookie-banner');
   if (cookieBanner) {
