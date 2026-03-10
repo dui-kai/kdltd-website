@@ -67,7 +67,7 @@ h4 { font-size: 1.15rem; }
 /* ===== Header ===== */
 .site-header {
   background: var(--color-cream);
-  border-bottom: 3px solid var(--color-coral);
+  border-bottom: 3px solid #62391B;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -120,8 +120,8 @@ h4 { font-size: 1.15rem; }
 .header-phone:hover { color: var(--color-coral); }
 
 .header-flag {
-  width: 40px;
-  height: 50px;
+  width: 50px;
+  height: 63px;
   object-fit: contain;
 }
 
@@ -219,7 +219,7 @@ h4 { font-size: 1.15rem; }
 
 .hero h1 {
   font-size: 3.25rem;
-  color: var(--color-coral);
+  color: #62391B;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -389,7 +389,7 @@ h4 { font-size: 1.15rem; }
 
 /* ===== Contact Section ===== */
 .contact-section {
-  background: var(--color-warm);
+  background: #62391B;
   padding: var(--spacing-xl) 0;
 }
 
@@ -687,7 +687,7 @@ h4 { font-size: 1.15rem; }
 }
 
 .service-cta {
-  background: var(--color-warm);
+  background: #62391B;
   padding: var(--spacing-lg) 0;
   text-align: center;
 }
