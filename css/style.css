@@ -1150,6 +1150,42 @@ li:has(.dropdown-divider) {
   font-size: 0.95rem;
 }
 
+/* ===== Booking CTA Card ===== */
+.booking-cta-card {
+  text-align: center;
+}
+
+.booking-cta-card h3,
+.booking-cta-card h2 {
+  color: #62391B;
+  margin-bottom: 0.75rem;
+}
+
+.booking-cta-card > p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.booking-cta-features {
+  margin-top: 1.5rem;
+  text-align: left;
+  display: inline-block;
+}
+
+.booking-cta-feature {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.booking-cta-feature span {
+  color: var(--color-coral);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .estimate-layout { grid-template-columns: 1fr; }
