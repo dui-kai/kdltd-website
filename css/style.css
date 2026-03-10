@@ -120,8 +120,8 @@ h4 { font-size: 1.15rem; }
 .header-phone:hover { color: var(--color-coral); }
 
 .header-flag {
-  width: 61px;
-  height: 77px;
+  width: 75px;
+  height: 95px;
   object-fit: contain;
 }
 
@@ -763,7 +763,15 @@ h4 { font-size: 1.15rem; }
   .nav-dropdown.open .dropdown-menu { display: block; }
 
   .header-phone { display: none; }
-  .header-flag { width: 45px; height: 57px; }
+  .header-flag { width: 55px; height: 70px; }
+
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+
+  /* Move hamburger to the right, before the flag */
+  nav { order: 2; margin-left: auto; }
+  .header-right { order: 3; gap: 0.5rem; }
 
   .form-row { grid-template-columns: 1fr; }
 
