@@ -717,6 +717,57 @@ li:has(.dropdown-divider) {
 .about-hero h1 { color: var(--color-cream); }
 .about-hero p { color: var(--color-white); max-width: 650px; margin: var(--spacing-sm) auto 0; font-size: 1.1rem; }
 
+/* Value Rows — alternating text + image */
+.value-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.value-row:last-child {
+  margin-bottom: 0;
+}
+
+.value-row--reverse {
+  direction: rtl;
+}
+
+.value-row--reverse > * {
+  direction: ltr;
+}
+
+.value-row-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.value-row-text h4 {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+}
+
+.value-row-text p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.value-row-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Legacy card grid (kept for fallback) */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -895,6 +946,19 @@ li:has(.dropdown-divider) {
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid,
   .values-grid { grid-template-columns: 1fr; }
+
+  .value-row {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .value-row--reverse {
+    direction: ltr;
+  }
+
+  .value-row-image img {
+    height: 280px;
+  }
 
   .service-showcase,
   .services-grid,
