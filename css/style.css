@@ -43,8 +43,18 @@ body {
 }
 
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--color-coral); text-decoration: none; transition: color var(--transition); }
-a:hover { color: var(--color-coral-dark); }
+a { color: var(--color-coral-dark); text-decoration: underline; text-underline-offset: 2px; transition: color var(--transition); }
+a:hover { color: var(--color-coral); }
+
+/* Nav, buttons, and decorative links skip underline */
+.nav-links a,
+.btn,
+.logo-area,
+.blog-card,
+.social-links a,
+.footer-links a,
+.header-phone,
+.blog-back-link { text-decoration: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
@@ -667,7 +677,7 @@ li:has(.dropdown-divider) {
   padding-top: var(--spacing-sm);
   text-align: center;
   font-size: 0.8rem;
-  color: #8A8480;
+  color: #B0AAA6;
 }
 
 /* ===== Legal/Privacy Page ===== */

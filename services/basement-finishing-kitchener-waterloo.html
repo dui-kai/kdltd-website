@@ -7,7 +7,10 @@
   <meta name="description" content="Professional basement finishing in Kitchener-Waterloo by KD Ltd. 40+ years of expertise. Free estimates. Call 519-313-5624.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Canonical URL -->
@@ -27,13 +30,23 @@
   <meta name="twitter:title" content="Basement Finishing Kitchener-Waterloo | KD Ltd">
   <meta name="twitter:description" content="Professional basement finishing in Kitchener-Waterloo by KD Ltd. 40+ years of expertise. Free estimates. Call 519-313-5624.">
 
-  <!-- Google Analytics (GA4) — Replace G-J9KDSLBH8F with your actual ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9KDSLBH8F"></script>
+  <!-- Google Analytics (GA4) — Deferred to avoid blocking render -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J9KDSLBH8F');
+    function loadGA4(){
+      if(document.querySelector('script[src*="googletagmanager.com/gtag"]'))return;
+      var s=document.createElement('script');
+      s.src='https://www.googletagmanager.com/gtag/js?id=G-J9KDSLBH8F';
+      s.async=true;
+      document.head.appendChild(s);
+      gtag('js',new Date());
+      gtag('config','G-J9KDSLBH8F');
+    }
+    var _gaT=setTimeout(loadGA4,3000);
+    ['click','scroll','keydown','touchstart'].forEach(function(e){
+      document.addEventListener(e,function h(){clearTimeout(_gaT);loadGA4();document.removeEventListener(e,h);},{once:true,passive:true});
+    });
   </script>
 
   <!-- Facebook Pixel — Replace FB_PIXEL_ID with your actual ID -->
@@ -55,7 +68,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo-area">
-        <img src="https://static.wixstatic.com/media/203968_e239c35239604e47b72fe45e1dff2469~mv2.jpeg" alt="KD Ltd Logo" class="logo">
+        <img src="https://static.wixstatic.com/media/203968_e239c35239604e47b72fe45e1dff2469~mv2.jpeg/v1/fill/w_144,h_144,al_c,q_85,enc_auto/logo.webp" alt="KD Ltd Logo" class="logo" width="72" height="72">
         <span class="logo-text">KD LTD</span>
       </a>
       <nav>
@@ -86,10 +99,12 @@
       </nav>
       <div class="header-right">
         <a href="tel:519-313-5624" class="header-phone">519-313-5624</a>
-        <img src="https://static.wixstatic.com/media/11062b_8f882a9634ee4a18acd35e1db73df829~mv2.jpg" alt="Canada" class="header-flag">
+        <img src="https://static.wixstatic.com/media/11062b_8f882a9634ee4a18acd35e1db73df829~mv2.jpg/v1/fill/w_144,h_144,al_c,q_85,enc_auto/flag.webp" alt="Canada" class="header-flag" width="72" height="72">
       </div>
     </div>
   </header>
+
+  <main>
 
   <!-- Hero -->
   <section class="service-hero">
@@ -124,8 +139,8 @@
           </div>
         </div>
         <div>
-          <img src="https://static.wixstatic.com/media/203968_26ec1779acb84c61a156181c154a3b27~mv2.jpg" alt="Basement Finishing in Kitchener-Waterloo" loading="lazy">
-          <img src="https://static.wixstatic.com/media/203968_030b7633ad4a471d878ce152259d1480~mv2.jpg" alt="Basement Finishing KW project by KD Ltd" loading="lazy" style="margin-top:var(--spacing-md);">
+          <img src="https://static.wixstatic.com/media/203968_26ec1779acb84c61a156181c154a3b27~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/basement.webp" alt="Basement Finishing in Kitchener-Waterloo" loading="lazy" width="800" height="560">
+          <img src="https://static.wixstatic.com/media/203968_030b7633ad4a471d878ce152259d1480~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/basement2.webp" alt="Basement Finishing KW project by KD Ltd" loading="lazy" width="800" height="560" style="margin-top:var(--spacing-md);">
         </div>
       </div>
     </div>
@@ -139,6 +154,8 @@
       <a href="https://book.kdltd.ca" target="_blank" rel="noopener noreferrer" class="btn btn--coral btn--lg">Get a Free Basement Finishing Estimate</a>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -182,7 +199,7 @@
   <!-- Cookie Banner -->
   <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-banner-inner">
-      <p>This website uses only essential cookies to ensure proper functionality. We do not use tracking, advertising, or analytics cookies. By continuing to browse, you accept our use of essential cookies. <a href="/privacy">Learn more</a></p>
+      <p>This website uses only essential cookies to ensure proper functionality. We do not use tracking, advertising, or analytics cookies. By continuing to browse, you accept our use of essential cookies. <a href="/privacy">Learn more about our privacy policy</a></p>
       <div class="cookie-banner-actions">
         <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accept</button>
         <button id="cookie-reject" class="cookie-btn cookie-btn--reject">Reject</button>

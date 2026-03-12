@@ -7,7 +7,10 @@
   <meta name="description" content="KD Ltd — 40+ years of expert carpentry and renovation services. Custom solutions, home upgrades, repairs, and installations. Serving Kitchener-Waterloo and surrounding areas. Call 519-313-5624.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Canonical URL -->
@@ -27,13 +30,23 @@
   <meta name="twitter:title" content="KD Ltd | Home Improvement & Renovation Experts | Kitchener-Waterloo">
   <meta name="twitter:description" content="KD Ltd — 40+ years of expert carpentry and renovation services. Custom solutions, home upgrades, repairs, and installations. Serving Kitchener-Waterloo and surrounding areas. Call 519-313-5624.">
 
-  <!-- Google Analytics (GA4) — Replace G-J9KDSLBH8F with your actual ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9KDSLBH8F"></script>
+  <!-- Google Analytics (GA4) — Deferred to avoid blocking render -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J9KDSLBH8F');
+    function loadGA4(){
+      if(document.querySelector('script[src*="googletagmanager.com/gtag"]'))return;
+      var s=document.createElement('script');
+      s.src='https://www.googletagmanager.com/gtag/js?id=G-J9KDSLBH8F';
+      s.async=true;
+      document.head.appendChild(s);
+      gtag('js',new Date());
+      gtag('config','G-J9KDSLBH8F');
+    }
+    var _gaT=setTimeout(loadGA4,3000);
+    ['click','scroll','keydown','touchstart'].forEach(function(e){
+      document.addEventListener(e,function h(){clearTimeout(_gaT);loadGA4();document.removeEventListener(e,h);},{once:true,passive:true});
+    });
   </script>
 
   <!-- Facebook Pixel — Replace FB_PIXEL_ID with your actual ID -->
@@ -95,7 +108,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo-area">
-        <img src="https://static.wixstatic.com/media/203968_e239c35239604e47b72fe45e1dff2469~mv2.jpeg" alt="KD Ltd Logo" class="logo">
+        <img src="https://static.wixstatic.com/media/203968_e239c35239604e47b72fe45e1dff2469~mv2.jpeg/v1/fill/w_144,h_144,al_c,q_85,enc_auto/logo.webp" alt="KD Ltd Logo" class="logo" width="72" height="72">
         <span class="logo-text">KD LTD</span>
       </a>
       <nav>
@@ -126,11 +139,12 @@
       </nav>
       <div class="header-right">
         <a href="tel:519-313-5624" class="header-phone">519-313-5624</a>
-        <img src="https://static.wixstatic.com/media/11062b_8f882a9634ee4a18acd35e1db73df829~mv2.jpg" alt="Canada" class="header-flag">
+        <img src="https://static.wixstatic.com/media/11062b_8f882a9634ee4a18acd35e1db73df829~mv2.jpg/v1/fill/w_144,h_144,al_c,q_85,enc_auto/flag.webp" alt="Canada" class="header-flag" width="72" height="72">
       </div>
     </div>
   </header>
 
+  <main>
   <!-- Hero -->
   <section class="hero">
     <div class="container">
@@ -148,14 +162,14 @@
       </div>
       <div class="service-showcase">
         <div class="service-card">
-          <img src="https://static.wixstatic.com/media/5f8f61_5163104905414336b97afa57fc93c6ab~mv2.jpg" alt="Custom library built by KD Ltd" loading="lazy">
+          <img src="https://static.wixstatic.com/media/5f8f61_5163104905414336b97afa57fc93c6ab~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/library.webp" alt="Custom library built by KD Ltd" loading="lazy" width="800" height="560">
           <div class="service-card-body">
             <p>Thoughtfully designed. Expertly crafted. Custom solutions made to work beautifully in your home.</p>
             <a href="/services" class="btn btn--coral">View More</a>
           </div>
         </div>
         <div class="service-card">
-          <img src="https://static.wixstatic.com/media/203968_92884d3775a84481b4d0c42c3f5c17ae~mv2.jpg" alt="Custom curved vanity by KD Ltd" loading="lazy">
+          <img src="https://static.wixstatic.com/media/203968_92884d3775a84481b4d0c42c3f5c17ae~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/vanity.webp" alt="Custom curved vanity by KD Ltd" loading="lazy" width="800" height="560">
           <div class="service-card-body">
             <p>Purposefully created. Meticulously executed. Bespoke solutions that belong in your home.</p>
             <a href="/services" class="btn btn--coral">View More</a>
@@ -173,14 +187,14 @@
       </div>
       <div class="service-showcase">
         <div class="service-card">
-          <img src="https://static.wixstatic.com/media/203968_26ec1779acb84c61a156181c154a3b27~mv2.jpg" alt="Home exterior with deck upgrade" loading="lazy">
+          <img src="https://static.wixstatic.com/media/203968_26ec1779acb84c61a156181c154a3b27~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/deck.webp" alt="Home exterior with deck upgrade" loading="lazy" width="800" height="560">
           <div class="service-card-body">
             <p>From small updates to complete transformations, we do it right. Smart planning, skilled execution, real results.</p>
             <a href="/services/upgrades" class="btn btn--coral">View More</a>
           </div>
         </div>
         <div class="service-card">
-          <img src="https://static.wixstatic.com/media/203968_e150065c0f9e48ba95038ee72c25ca0e~mv2.jpeg" alt="Kitchen renovation by KD Ltd" loading="lazy">
+          <img src="https://static.wixstatic.com/media/203968_e150065c0f9e48ba95038ee72c25ca0e~mv2.jpeg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/kitchen.webp" alt="Kitchen renovation by KD Ltd" loading="lazy" width="800" height="560">
           <div class="service-card-body">
             <p>From focused enhancements to full-scale change, we lead with intent — clear strategy, strong execution, proven outcomes.</p>
             <a href="/services/upgrades" class="btn btn--coral">View More</a>
@@ -198,14 +212,14 @@
       </div>
       <div class="service-showcase">
         <div class="service-card">
-          <img src="https://static.wixstatic.com/media/203968_19d16436bbb14e7a9405c820ec4f724f~mv2.jpg" alt="White kitchen remodel by KD Ltd" loading="lazy">
+          <img src="https://static.wixstatic.com/media/203968_19d16436bbb14e7a9405c820ec4f724f~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/kitchen-white.webp" alt="White kitchen remodel by KD Ltd" loading="lazy" width="800" height="560">
           <div class="service-card-body">
             <p>Reliable repairs and professional installations you can trust. Done right the first time, with craftsmanship that lasts.</p>
             <a href="/services/repairs" class="btn btn--coral">View More</a>
           </div>
         </div>
         <div class="service-card">
-          <img src="https://static.wixstatic.com/media/203968_6753262938204736bb0339ffdbb6fa42~mv2.jpg" alt="Stone counter bar by KD Ltd" loading="lazy">
+          <img src="https://static.wixstatic.com/media/203968_6753262938204736bb0339ffdbb6fa42~mv2.jpg/v1/fill/w_800,h_560,al_c,q_80,enc_auto/bar.webp" alt="Stone counter bar by KD Ltd" loading="lazy" width="800" height="560">
           <div class="service-card-body">
             <p>Consistent service and expert installation you can rely on. Completed with care, and made to stand the test of time.</p>
             <a href="/services/installations" class="btn btn--coral">View More</a>
@@ -312,6 +326,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
@@ -353,7 +369,7 @@
   <!-- Cookie Banner -->
   <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-banner-inner">
-      <p>This website uses only essential cookies to ensure proper functionality. We do not use tracking, advertising, or analytics cookies. By continuing to browse, you accept our use of essential cookies. <a href="/privacy">Learn more</a></p>
+      <p>This website uses only essential cookies to ensure proper functionality. We do not use tracking, advertising, or analytics cookies. By continuing to browse, you accept our use of essential cookies. <a href="/privacy">Learn more about our privacy policy</a></p>
       <div class="cookie-banner-actions">
         <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accept</button>
         <button id="cookie-reject" class="cookie-btn cookie-btn--reject">Reject</button>
@@ -361,6 +377,6 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
