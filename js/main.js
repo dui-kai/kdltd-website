@@ -74,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
       acceptBtn.addEventListener('click', () => {
         localStorage.setItem('kdltd-cookie-consent', 'accepted');
         cookieBanner.classList.remove('show');
+        // Load GA4 now that user has accepted
+        if (typeof loadGA4 === 'function') loadGA4();
       });
     }
 
@@ -81,6 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
       rejectBtn.addEventListener('click', () => {
         localStorage.setItem('kdltd-cookie-consent', 'rejected');
         cookieBanner.classList.remove('show');
+        // Delete GA cookies
+        document.cookie.split(';').forEach(function(c) {
+          var name = c.split('=')[0].trim();
+          if (name.indexOf('_ga') === 0) {
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.' + location.hostname;
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+          }
+        });
       });
     }
   }
@@ -91,6 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
     manageCookies.addEventListener('click', (e) => {
       e.preventDefault();
       localStorage.removeItem('kdltd-cookie-consent');
+      // Delete GA cookies when resetting preference
+      document.cookie.split(';').forEach(function(c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') === 0) {
+          document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.' + location.hostname;
+          document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+        }
+      });
       const banner = document.getElementById('cookie-banner');
       if (banner) banner.classList.add('show');
     });
