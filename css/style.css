@@ -974,10 +974,12 @@ li:has(.dropdown-divider) {
   color: inherit;
 }
 
-.blog-card-image img {
+.blog-card-image img,
+.blog-card-image video {
   width: 100%;
   height: 240px;
   object-fit: cover;
+  background: #3a2a1a;
 }
 
 .blog-card-body {
@@ -1187,6 +1189,7 @@ li:has(.dropdown-divider) {
 .home-blog-video {
   position: relative;
   overflow: hidden;
+  background: #3a2a1a;
 }
 
 .home-blog-video video {
