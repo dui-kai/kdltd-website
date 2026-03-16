@@ -114,6 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Blog video autoplay on scroll (Intersection Observer)
+  const autoplayVideos = document.querySelectorAll('.blog-autoplay-video');
+  if (autoplayVideos.length > 0 && 'IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.play().catch(() => {});
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    autoplayVideos.forEach(video => videoObserver.observe(video));
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
